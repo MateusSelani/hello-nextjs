@@ -13,9 +13,6 @@ export default function Numeros(){
     const oldValueX = useRef(0)
     const oldValueY = useRef(0)
 
-    // falta o loading dos numeros
-    // arrumar css
-
     useEffect(() => {
         const timerOne = setTimeout(() => {
             oldValueX.current = x
@@ -43,7 +40,11 @@ export default function Numeros(){
             <div className="text-center mx-96">
                 <div className="mx-96 my-5">
                     <h1 className="text-8xl font-bold p-5 border border-gray-400">
-                        {(oldValueX.current == 0 ? '00' : oldValueX.current)}
+                        {
+                            loader == false ? 
+                                '--' : 
+                                (oldValueX.current < 10 ? '0'+ oldValueX.current : oldValueX.current)
+                        }
                     </h1>
                 </div>
                 
@@ -55,7 +56,11 @@ export default function Numeros(){
                 
                 <div className="mx-96 my-5">
                     <h1 className="text-8xl font-bold p-5 border border-gray-400">
-                        {(oldValueY.current == 0 ? '00' : oldValueY.current)}
+                        {
+                            loader == false ? 
+                                '--' : 
+                                (oldValueY.current < 10 ? '0'+ oldValueY.current : oldValueY.current)
+                        }
                     </h1>
                 </div>
             </div>
