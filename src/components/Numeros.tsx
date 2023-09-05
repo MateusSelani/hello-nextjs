@@ -31,9 +31,14 @@ export default function Numeros(){
             clearTimeout(timerOne)
             clearTimeout(timerTwo)
             setLoader(false)
+            setBg('bg-blue-900')
             setTxtColor('text-gray-400')
         }
     }, [initCounter])
+
+    function formatedNumber(value: number) {
+        return (value < 10 ? '0'+ value : value)
+    }
 
     return(
         <div className="flex flex-col bg-black h-screen text-gray-400 justify-center">
@@ -43,7 +48,7 @@ export default function Numeros(){
                         {
                             loader == false ? 
                                 '--' : 
-                                (oldValueX.current < 10 ? '0'+ oldValueX.current : oldValueX.current)
+                                formatedNumber(oldValueX.current)
                         }
                     </h1>
                 </div>
@@ -59,7 +64,7 @@ export default function Numeros(){
                         {
                             loader == false ? 
                                 '--' : 
-                                (oldValueY.current < 10 ? '0'+ oldValueY.current : oldValueY.current)
+                                formatedNumber(oldValueY.current)
                         }
                     </h1>
                 </div>
