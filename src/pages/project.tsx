@@ -24,14 +24,15 @@ export default function Project() {
             <div className="my-5 mx-60">
                 <div className="grid grid-cols-3 gap-4">
                     {
-                        content.map((item) => <Cards key={item.id}
-                            id={item.id}
-                            titulo={item.titulo}
-                            txt={item.txt}
-                        />)
+                    content.map((item) => <Cards key={item.id
+                    }
+                        id={item.id}
+                        titulo={item.titulo}
+                        txt={item.txt}
+                    />)
                     }
                 </div>
             </div>
-        </div>
+        </div>  
     )
 }
