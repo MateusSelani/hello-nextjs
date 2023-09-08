@@ -33,6 +33,6 @@ export default function Project() {
                     }
                 </div>
             </div>
-        </div>  
+        </div>
     )
 }
