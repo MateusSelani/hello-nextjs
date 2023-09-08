@@ -14,7 +14,7 @@ export default function Cards({id, titulo, txt}: any) {
                 <div className="flex flex-row gap-2 items-center">
                     <button className="bg-blue-800 text-white p-3 rounded
                         hover:bg-blue-900 hover:text-gray-300">
-                            <Link href={`/${removeWhiteSpaces(titulo)}`}>Visualizar</Link>
+                            <Link href={`/${id}`}>Visualizar</Link>
                     </button>
                     <code className="w-full text-end text-gray-600 pr-2">#{id}</code>
                 </div>
